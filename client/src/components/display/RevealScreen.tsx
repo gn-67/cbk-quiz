@@ -25,6 +25,7 @@ export default function RevealScreen({ state }: { state: SessionPublicState }) {
         <h1>{n ? `Question ${n}` : 'Answer'}</h1>
         <div className="rv-correct">
           Correct answer: <b>{correctText}</b>
+          <span style={{ opacity: 0.7, marginLeft: 16 }}>{totalAnswered} answered</span>
         </div>
       </div>
       <div className="tiles">
@@ -53,7 +54,6 @@ export default function RevealScreen({ state }: { state: SessionPublicState }) {
               </div>
               <div className="rv-count">
                 {c}
-                {i === 3 && <small>/ {totalAnswered}</small>}
               </div>
             </div>
           );
