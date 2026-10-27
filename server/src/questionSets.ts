@@ -191,6 +191,8 @@ function seedSet(): QuestionSet {
         ['32K tokens', '200K tokens', '10 million tokens', '1 million tokens'], 3),
       q('Which command scans your repo and generates a CLAUDE.md?',
         ['/setup', '/memory', '/init', '/scan'], 2),
+      q('Which macOS command keeps your Mac awake so Claude can keep working while you step away?',
+        ['nosleep', 'caffeinate', 'stayawake', 'insomnia'], 1),
       q("What's Anthropic's training approach where Claude learns from a written set of principles?",
         ['Constitutional AI', 'Principled RLHF', 'Rulebook Tuning', 'Charter Learning'], 0, 25),
     ],
