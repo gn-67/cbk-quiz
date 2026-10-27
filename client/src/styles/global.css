@@ -1,0 +1,67 @@
+/* ===== CBC Quiz design tokens ===== */
+:root {
+  --bg: #1a1526;             /* deep plum */
+  --bg-2: #241d33;
+  --surface: #2e2542;
+  --surface-2: #3a2f52;
+  --text: #f7f3ee;
+  --text-dim: #b7aec9;
+  --accent: #d97757;         /* Claude terracotta */
+  --accent-2: #f2a68b;
+  --success: #3ddc84;
+  --danger: #ff4d6d;
+  --gold: #ffd200;
+  --gold-2: #ffb700;
+  --gold-text: #3b2a00;
+
+  --ans-0: #e21b3c;  /* red / triangle */
+  --ans-1: #1368ce;  /* blue / diamond */
+  --ans-2: #d89e00;  /* yellow / circle */
+  --ans-3: #26890c;  /* green / square */
+
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+button { font-family: inherit; cursor: pointer; }
+input, textarea, select { font-family: inherit; }
+
+/* Shared utility classes */
+.btn {
+  border: 0; border-radius: var(--radius-sm); padding: 14px 22px; font-size: 18px; font-weight: 700;
+  background: var(--accent); color: #fff; transition: transform .08s ease, filter .15s ease;
+}
+.btn:active { transform: scale(.97); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn.secondary { background: var(--surface-2); color: var(--text); }
+.btn.danger { background: var(--danger); }
+
+.card { background: var(--surface); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+
+/* Bright gold full-screen state for the top 3 players */
+.gold-screen {
+  background: radial-gradient(circle at 50% 30%, #fff1a8 0%, var(--gold) 45%, var(--gold-2) 100%) !important;
+  color: var(--gold-text) !important;
+  animation: goldPulse 1.6s ease-in-out infinite;
+}
+@keyframes goldPulse {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.12); }
+}
+
+@keyframes pop { 0% { transform: scale(.6); opacity: 0; } 70% { transform: scale(1.06); opacity: 1; } 100% { transform: scale(1); } }
+@keyframes fadeUp { from { transform: translateY(16px); opacity: 0; } to { transform: none; opacity: 1; } }
+.pop { animation: pop .35s ease-out both; }
+.fade-up { animation: fadeUp .35s ease-out both; }
