@@ -195,6 +195,8 @@ function seedSet(): QuestionSet {
         ['nosleep', 'caffeinate', 'stayawake', 'insomnia'], 1),
       q("What's Anthropic's training approach where Claude learns from a written set of principles?",
         ['Constitutional AI', 'Principled RLHF', 'Rulebook Tuning', 'Charter Learning'], 0, 25),
+      q("What's Anthropic's newest launch, a proactive agent app that keeps working while you're away?",
+        ['Claude Dashboards', 'Claude Motion', 'Claude Cowork', 'Claude Duet'], 3, 25),
     ],
   };
 }
