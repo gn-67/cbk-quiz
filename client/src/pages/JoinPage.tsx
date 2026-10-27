@@ -86,8 +86,8 @@ export default function JoinPage() {
       <main className="pl-main pl-join__main">
         <header className="pl-join__brand fade-up">
           <div className="pl-join__logo" aria-hidden="true">✦</div>
-          <h1 className="pl-join__title">CBC Quiz</h1>
-          <p className="pl-join__subtitle">Claude Builder Club</p>
+          <h1 className="pl-join__title">CBK</h1>
+          <p className="pl-join__subtitle">Claude Ball Knowledge</p>
         </header>
 
         {notice && status.kind === 'idle' && (

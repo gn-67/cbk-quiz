@@ -57,7 +57,7 @@ function CodeEntry() {
   return (
     <Shell>
       <div className="dp-status">
-        <div className="brand">CBC Quiz · Display</div>
+        <div className="brand">CBK · Display</div>
         <h1>Enter game code</h1>
         <p>Open this page on the projector and enter the 6-digit session code.</p>
         <form className="dp-code-form" onSubmit={submit}>
@@ -157,7 +157,7 @@ function LiveDisplay({ code }: { code: string }) {
     return (
       <Shell>
         <div className="dp-status">
-          <div className="brand">CBC Quiz</div>
+          <div className="brand">CBK</div>
           <h1>Session closed</h1>
           <p>The host has closed game {code}.</p>
           <Link to="/display">Show another game</Link>
@@ -169,7 +169,7 @@ function LiveDisplay({ code }: { code: string }) {
     return (
       <Shell>
         <div className="dp-status">
-          <div className="brand">CBC Quiz</div>
+          <div className="brand">CBK</div>
           <h1>Can't show game {code}</h1>
           <p className="dp-error">{error}</p>
           <Link to="/display">Enter a different code</Link>

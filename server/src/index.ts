@@ -66,7 +66,7 @@ httpServer.listen(PORT, () => {
   const pwHint = IS_DEFAULT_ADMIN_PASSWORD
     ? 'admin password: default (set ADMIN_PASSWORD to change)'
     : 'admin password: from ADMIN_PASSWORD env';
-  console.log(`[server] CBC Quiz listening on http://localhost:${PORT} (${IS_PROD ? 'production' : 'dev'}) — ${pwHint}`);
+  console.log(`[server] CBK listening on http://localhost:${PORT} (${IS_PROD ? 'production' : 'dev'}) — ${pwHint}`);
 });
 
 for (const signal of ['SIGINT', 'SIGTERM'] as const) {

@@ -41,8 +41,8 @@ export default function LobbyScreen({ state }: { state: SessionPublicState }) {
 
       <div className="lobby-right">
         <div className="lobby-title">
-          <h1>CBC Quiz</h1>
-          <span>Claude Builder Club</span>
+          <h1>CBK</h1>
+          <span>Claude Ball Knowledge</span>
         </div>
         <div className="lobby-count">
           Players: <span className="num" key={count}>{count}</span>

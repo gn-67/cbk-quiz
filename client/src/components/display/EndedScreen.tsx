@@ -12,7 +12,7 @@ export default function EndedScreen({ state }: { state: SessionPublicState }) {
         </div>
       )}
       <div className="code">
-        CBC Quiz · Claude Builder Club · code <b>{state.code}</b>
+        CBK · Claude Builder Club · code <b>{state.code}</b>
       </div>
     </div>
   );

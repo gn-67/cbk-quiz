@@ -2,7 +2,7 @@
   "name": "cbc-quiz",
   "private": true,
   "version": "0.1.0",
-  "description": "Kahoot-style live quiz for Claude Builder Club meetings",
+  "description": "CBK - Claude Ball Knowledge: live quiz for Claude Builder Club meetings",
   "workspaces": ["server", "client"],
   "scripts": {
     "dev": "concurrently -n server,client -c blue,magenta \"npm run dev -w server\" \"npm run dev -w client\"",

@@ -26,7 +26,7 @@ export default function AdminPage() {
   const [loginError, setLoginError] = useState<string | null>(null);
 
   useEffect(() => {
-    document.title = 'CBC Quiz Admin';
+    document.title = 'CBK Admin';
   }, []);
 
   // Resume a stored password on load.
@@ -178,7 +178,7 @@ function Dashboard({ signOut }: { signOut: (reason?: string) => void }) {
         <header className="adm-topbar">
           <div className="adm-brand">
             <span className="adm-logo">Q</span>
-            <span>CBC Quiz Admin</span>
+            <span>CBK Admin</span>
           </div>
           <span className="adm-conn" title={connected ? 'Connected and signed in' : 'Reconnecting to server…'}>
             <span className={`adm-dot${connected ? ' on' : ''}`} />

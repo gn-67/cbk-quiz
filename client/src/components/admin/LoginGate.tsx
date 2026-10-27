@@ -52,7 +52,7 @@ export default function LoginGate({ initialError, onSuccess }: Props) {
       <form className="card fade-up" onSubmit={submit}>
         <div className="adm-brand">
           <span className="adm-logo">Q</span>
-          <h1>CBC Quiz Admin</h1>
+          <h1>CBK Admin</h1>
         </div>
         <p>Sign in to manage question sets and run live games.</p>
         <label className="adm-field">

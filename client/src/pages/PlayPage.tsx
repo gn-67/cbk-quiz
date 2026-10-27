@@ -188,7 +188,7 @@ function Header({ state, gold }: { state: PlayerState; gold: boolean }) {
   return (
     <header className={`pl-header ${gold ? 'pl-header--gold' : ''}`}>
       <span className="pl-header__q">
-        {showQ ? `Q ${state.currentIndex + 1} / ${state.totalQuestions}` : 'CBC Quiz'}
+        {showQ ? `Q ${state.currentIndex + 1} / ${state.totalQuestions}` : 'CBK'}
       </span>
       <span className="pl-header__score">{state.score.toLocaleString()} pts</span>
     </header>

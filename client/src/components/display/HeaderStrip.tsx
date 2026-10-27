@@ -6,7 +6,7 @@ export default function HeaderStrip({ state }: { state: SessionPublicState }) {
   return (
     <div className="dp-strip">
       <div>
-        CBC Quiz<span className="dot">·</span>code <b>{state.code}</b>
+        CBK<span className="dot">·</span>code <b>{state.code}</b>
         <span className="dot">·</span>
         {players} {players === 1 ? 'player' : 'players'}
       </div>

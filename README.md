@@ -1,4 +1,4 @@
-# CBC Quiz
+# CBK - Claude Ball Knowledge
 
 Kahoot-style live quiz for Claude Builder Club meetings. Up to 200 players join by QR code or 6-digit code, get a random name, and answer on their phones. The top 3 phones turn bright gold on every leaderboard and on the final podium.
 

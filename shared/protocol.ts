@@ -1,5 +1,5 @@
 /**
- * CBC Quiz — shared protocol between server and all clients.
+ * CBK — shared protocol between server and all clients.
  * THIS FILE IS THE CONTRACT. Server and every client import from here.
  * Do not change event names or payload shapes without updating all consumers.
  *
