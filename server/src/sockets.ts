@@ -21,6 +21,32 @@ type IO = Server<ClientToServerEvents, ServerToClientEvents, Record<never, never
 type Sock = Socket<ClientToServerEvents, ServerToClientEvents, Record<never, never>, SocketData>;
 
 const DEV_FALLBACK_BASE_URL = 'http://localhost:5173';
+
+/**
+ * PUBLIC_URL must be a full web address (e.g. https://my-app.onrender.com) or the QR code
+ * is useless: phones treat a bare word like "my-app" as a search. Add https:// when the
+ * scheme is missing, and ignore values that aren't a real hostname so we fall back to the
+ * address the display/admin page was actually loaded from.
+ */
+function resolvePublicBaseUrl(raw: string | undefined): string | null {
+  const value = raw?.trim();
+  if (!value) return null;
+  const withScheme = /^https?:\/\//i.test(value) ? value : `https://${value}`;
+  try {
+    const url = new URL(withScheme);
+    const host = url.hostname;
+    if (host !== 'localhost' && !host.includes('.')) throw new Error('not a full hostname');
+    return url.origin;
+  } catch {
+    console.warn(
+      `[server] Ignoring PUBLIC_URL="${value}": it must be a full address like https://your-app.onrender.com. ` +
+        'Falling back to the address the display page was opened from.',
+    );
+    return null;
+  }
+}
+
+const PUBLIC_BASE_URL = resolvePublicBaseUrl(process.env.PUBLIC_URL);
 /** Minimum spacing between broadcasts for one session; bursts of answers coalesce. */
 const BROADCAST_THROTTLE_MS = 100;
 
@@ -104,7 +130,7 @@ function inferBaseUrl(socket: Sock): string | null {
 }
 
 function joinUrlFor(session: GameSession): string {
-  const base = (process.env.PUBLIC_URL || session.baseUrl || DEV_FALLBACK_BASE_URL).replace(/\/+$/, '');
+  const base = (PUBLIC_BASE_URL || session.baseUrl || DEV_FALLBACK_BASE_URL).replace(/\/+$/, '');
   return `${base}/?code=${session.code}`;
 }
 
