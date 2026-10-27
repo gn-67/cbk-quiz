@@ -181,7 +181,7 @@ function seedSet(): QuestionSet {
         ['Sam Altman & Greg Brockman', 'Dario & Daniela Amodei', 'Demis Hassabis & Mustafa Suleyman', 'Elon Musk'], 1),
       q('What tool lets you use Claude right in your terminal?',
         ['Claude Code', 'Claude Shell', 'Claude CLI Pro', 'Claude Desktop'], 0),
-      q('Which Claude tier is the fastest and cheapest?',
+      q('Which Claude model is the fastest and cheapest?',
         ['Opus', 'Sonnet', 'Fable', 'Haiku'], 3),
       q('What does MCP stand for?',
         ['Machine Code Protocol', 'Multi-Chain Prompting', 'Model Context Protocol', 'Managed Compute Platform'], 2),

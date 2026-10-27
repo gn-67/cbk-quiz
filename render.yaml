@@ -1,0 +1,17 @@
+# Render Blueprint: one Node web service that serves the API, WebSockets, and the built React client.
+services:
+  - type: web
+    name: cbk-quiz
+    runtime: node
+    plan: starter          # "free" works too, but it sleeps after 15 min idle and takes ~1 min to wake
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: ADMIN_PASSWORD
+        sync: false        # Render asks you for this value when you create the Blueprint
+      - key: PUBLIC_URL
+        sync: false        # e.g. https://cbk-quiz.onrender.com (used in the join QR code)
