@@ -3,7 +3,7 @@ services:
   - type: web
     name: cbk-quiz
     runtime: node
-    plan: starter          # "free" works too, but it sleeps after 15 min idle and takes ~1 min to wake
+    plan: free             # sleeps after 15 min idle; ~1 min to wake. Change to "starter" for always-on
     buildCommand: npm ci --include=dev && npm run build
     startCommand: npm start
     healthCheckPath: /api/health
