@@ -1,27 +1,26 @@
-/** Random, friendly, PG player names like "Cosmic Otter" or "Turbo Pancake". */
+/** Random, PG player names built from Claude / Anthropic terms, like "Agentic Haiku" or "Caffeinated Subagent". */
 
 const ADJECTIVES = [
-  'Cosmic', 'Quantum', 'Turbo', 'Mighty', 'Sneaky', 'Fuzzy', 'Electric', 'Jolly',
-  'Brave', 'Zesty', 'Lunar', 'Solar', 'Pixel', 'Neon', 'Chill', 'Witty',
-  'Snappy', 'Groovy', 'Dizzy', 'Spicy', 'Fluffy', 'Rapid', 'Clever', 'Bouncy',
-  'Crispy', 'Dapper', 'Epic', 'Fancy', 'Giga', 'Hyper', 'Icy', 'Jazzy',
-  'Kinetic', 'Lucky', 'Mellow', 'Nimble', 'Orbital', 'Peppy', 'Quirky', 'Radiant',
-  'Sparkly', 'Toasty', 'Ultra', 'Vivid', 'Wobbly', 'Xtra', 'Yummy', 'Zippy',
-  'Binary', 'Cyber', 'Digital', 'Fractal', 'Galactic', 'Hologram', 'Infinite', 'Laser',
-  'Magnetic', 'Nebula', 'Optic', 'Plasma', 'Robo', 'Stellar', 'Techno', 'Vector',
-  'Wavy', 'Astro', 'Blazing', 'Comet', 'Dreamy', 'Frosty', 'Golden', 'Humble',
+  'Helpful', 'Honest', 'Harmless', 'Agentic', 'Adaptive', 'Aligned', 'Cached', 'Streaming',
+  'Thoughtful', 'Curious', 'Multimodal', 'Autonomous', 'Proactive', 'Interpretable',
+  'Recursive', 'Parallel', 'Async', 'Tokenized', 'Compacted', 'Prompted', 'Fine-Tuned',
+  'Reasoning', 'Caffeinated', 'Headless', 'Sandboxed', 'Verified', 'Grounded', 'Steerable',
+  'Frontier', 'Emergent', 'Latent', 'Embedded', 'Vectorized', 'Synthetic', 'Zero-Shot',
+  'Few-Shot', 'One-Shot', 'Distilled', 'Quantized', 'Hooked', 'Forked', 'Deployed', 'Shipped',
+  'Vibe-Coded', 'Golden Gate', 'Constitutional', 'Benchmarked', 'Overclocked', 'Stochastic',
+  'Context-Rich', 'Long-Context', 'Tool-Using', 'Self-Correcting', 'Well-Prompted', 'Elicited',
+  'Scalable',
 ];
 
 const NOUNS = [
-  'Otter', 'Capybara', 'Pancake', 'Penguin', 'Walrus', 'Narwhal', 'Koala', 'Panda',
-  'Llama', 'Alpaca', 'Sloth', 'Fox', 'Badger', 'Hedgehog', 'Quokka', 'Axolotl',
-  'Raccoon', 'Lemur', 'Gecko', 'Platypus', 'Puffin', 'Toucan', 'Falcon', 'Owl',
-  'Dolphin', 'Manatee', 'Octopus', 'Jellyfish', 'Seahorse', 'Turtle', 'Beaver', 'Moose',
-  'Rocket', 'Comet', 'Meteor', 'Nebula', 'Asteroid', 'Satellite', 'Galaxy', 'Pulsar',
-  'Robot', 'Droid', 'Pixel', 'Byte', 'Kernel', 'Server', 'Router', 'Laptop',
-  'Waffle', 'Taco', 'Burrito', 'Noodle', 'Dumpling', 'Pretzel', 'Muffin', 'Bagel',
-  'Pickle', 'Mango', 'Kiwi', 'Donut', 'Churro', 'Nugget', 'Biscuit', 'Cupcake',
-  'Wizard', 'Ninja', 'Pirate', 'Knight', 'Viking', 'Yeti', 'Dragon', 'Phoenix',
+  'Claude', 'Haiku', 'Sonnet', 'Opus', 'Fable', 'Mythos', 'Shannon', 'Claudius', 'Artifact',
+  'Agent', 'Subagent', 'Prompt', 'Token', 'Tokenizer', 'Transformer', 'Embedding', 'Skill',
+  'Hook', 'Plugin', 'Connector', 'Workflow', 'Sandbox', 'Terminal', 'Duet', 'Constitution',
+  'Neuron', 'Feature', 'Gradient', 'Checkpoint', 'Benchmark', 'Eval', 'Router', 'Cache',
+  'Debugger', 'Linter', 'Commit', 'Diff', 'Repo', 'Kernel', 'Daemon', 'Parser', 'Spark',
+  'Tool Call', 'MCP Server', 'Context Window', 'System Prompt', 'Attention Head', 'Weight',
+  'Logit', 'Thinking Block', 'Codebase', 'Pull Request', 'Stack Trace', 'Unit Test',
+  'Model Card', 'Safety Level',
 ];
 
 function pick<T>(arr: T[]): T {
