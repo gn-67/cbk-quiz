@@ -42,7 +42,7 @@ function persist(): void {
 
 function load(): void {
   if (!fs.existsSync(DATA_FILE)) {
-    sets = [seedSet()];
+    sets = seedSets();
     persist();
     return;
   }
@@ -169,9 +169,9 @@ function q(
   return { id: nanoid(10), text, choices, correctIndex, timeLimitSec };
 }
 
-function seedSet(): QuestionSet {
+function seedSets(): QuestionSet[] {
   const now = Date.now();
-  return {
+  return [{
     id: nanoid(10),
     name: 'Claude Builder Club Trivia',
     createdAt: now,
@@ -198,7 +198,38 @@ function seedSet(): QuestionSet {
       q("What's Anthropic's newest launch, a proactive agent app that keeps working while you're away?",
         ['Claude Dashboards', 'Claude Motion', 'Claude Cowork', 'Claude Duet'], 3, 25),
     ],
-  };
+  }, {
+    id: nanoid(10),
+    name: 'Guess the Emoji',
+    createdAt: now,
+    updatedAt: now,
+    questions: [
+      q('Movie: 🤠🚀5️⃣',
+        ['Toy Story 4', 'Lightyear', 'Toy Story 5', 'Inside Out 2'], 2),
+      q('Brand: 👹🧸🦷',
+        ['Labubu', 'Squishmallows', 'Jellycat', 'Sonny Angel'], 0),
+      q('Movie: 🧤✨🕺',
+        ['Elvis', 'Rocketman', 'Bohemian Rhapsody', 'Michael'], 3),
+      q('Song: 🌸🌊👸',
+        ['Opalite', 'The Fate of Ophelia', 'Elizabeth Taylor', 'Actually Romantic'], 1),
+      q('Movie: 🕷️🆕☀️',
+        ['Spider-Man: No Way Home', 'Spider-Man: Across the Spider-Verse', 'Spider-Man: Brand New Day', 'Spider-Man: Beyond the Spider-Verse'], 2, 25),
+      q('Brand: 🍋🧘‍♀️',
+        ['Lululemon', 'Alo Yoga', 'Vuori', 'Athleta'], 0, 25),
+      q('Song: 🤔✅🤠⭐',
+        ["Texas Hold 'Em", 'A Bar Song (Tipsy)', 'Pink Pony Club', "Choosin' Texas"], 3, 25),
+      q('Movie: ⛵🏝️🐑👁️',
+        ['Gladiator II', 'The Odyssey', 'Troy', '300: Rise of an Empire'], 1, 25),
+      q('Brand: 💧💀',
+        ['Liquid I.V.', 'Celsius', 'Liquid Death', 'Prime'], 2, 30),
+      q('Song: 📍🏠4️⃣♾️',
+        ['Hate That I Made You Love Me', 'Stay Here 4 Life', 'Drop Dead', 'Patient Zero'], 1, 30),
+      q('Brand: 🥤🚗🔥',
+        ['Owala', 'Stanley', 'Yeti', 'Hydro Flask'], 1, 30),
+      q('Song: 👩🤫',
+        ['Nokia', 'What Did I Miss?', 'Gimme a Hug', 'Janice STFU'], 3, 30),
+    ],
+  }];
 }
 
 load();

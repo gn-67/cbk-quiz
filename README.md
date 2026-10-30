@@ -30,5 +30,5 @@ Scoring: correct = 500–1000 by speed, plus a streak bonus of up to +250.
 
 ## Notes
 
-- State is in memory (sessions are lost on restart). Question sets persist to `server/data/question-sets.json`, seeded with a 10-question Claude trivia set.
+- State is in memory (sessions are lost on restart). Question sets persist to `server/data/question-sets.json`, seeded with a 10-question Claude trivia set and a 12-question Guess the Emoji set.
 - Load test: `npm start` in one terminal, then `PLAYERS=200 URL=http://localhost:3001 npm run loadtest`.
